@@ -1,5 +1,7 @@
 import SideBar from "@/components/sidebar/app.sidebar";
 import "./globals.css";
+
+
 export default function RootLayout({
     children,
 }: Readonly<{
