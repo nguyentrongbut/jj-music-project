@@ -1,8 +1,5 @@
-import SideBar from "@/components/sidebar/app.sidebar";
+const RecommendPage = () => {
+    return <div>Recommend Page</div>;
+};
 
-export default function Home() {
-    return (
-        <div>
-        </div>
-    );
-}
+export default RecommendPage;

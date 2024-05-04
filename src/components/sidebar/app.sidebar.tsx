@@ -43,7 +43,7 @@ const SideBar = () => {
                     {/* Music */}
                     <li>
                         <Link
-                            href="/"
+                            href="/music"
                             className="flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]"
                         >
                             <MusicalNoteIcon className="h-6 w-6 text-[2b2b2b]" />
@@ -54,7 +54,7 @@ const SideBar = () => {
                     {/* Video */}
                     <li>
                         <Link
-                            href="/"
+                            href="/video"
                             className="flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]"
                         >
                             <VideoCameraIcon className="h-6 w-6 text-[2b2b2b]" />
@@ -65,7 +65,7 @@ const SideBar = () => {
                     {/* Radio */}
                     <li>
                         <Link
-                            href="/"
+                            href="/radio"
                             className="flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]"
                         >
                             <RadioIcon className="h-6 w-6 text-[2b2b2b]" />
@@ -81,7 +81,7 @@ const SideBar = () => {
                     {/* Like */}
                     <li>
                         <Link
-                            href="/"
+                            href="/like"
                             className="flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]"
                         >
                             <HeartIcon className="h-6 w-6 text-[2b2b2b]" />
@@ -92,7 +92,7 @@ const SideBar = () => {
                     {/* My Playlist */}
                     <li>
                         <Link
-                            href="/"
+                            href="/playlist"
                             className="flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]"
                         >
                             <AdjustmentsHorizontalIcon className="h-6 w-6 text-[2b2b2b]" />

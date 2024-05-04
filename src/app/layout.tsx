@@ -9,7 +9,7 @@ export default function RootLayout({
         <html lang="en">
             <body>
                 <SideBar />
-                {children}
+                <main className="ml-[204px]">{children}</main>
             </body>
         </html>
     );
