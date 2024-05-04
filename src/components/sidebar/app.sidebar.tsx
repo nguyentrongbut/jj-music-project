@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// initializes an array of objects (Online music)
 const linksOnlineMusic = [
     { name: "Recommend", href: "/", icon: StarIcon },
     { name: "Music", href: "/music", icon: MusicalNoteIcon },
@@ -19,16 +20,17 @@ const linksOnlineMusic = [
     { name: "Radio", href: "/radio", icon: RadioIcon },
 ];
 
+// initializes an array of objects (My music)
 const linksMyMusic = [
     {name: "Like", href: "/like", icon: HeartIcon},
     {name: "Playlist", href: "/playlist", icon: AdjustmentsHorizontalIcon},
 ]
 const SideBar = () => {
-    const pathname = usePathname();
+    const pathname = usePathname(); // Get the current router link
     return (
         <aside className="w-[204px] fixed top-0 bottom-0 left-0 bg-[#f0f0f0] pt-4 px-[19px]">
             {/* Logo */}
-            <Link href="/">
+            <Link key="jj-music" href="/">
                 <Image
                     className="ml-[14px]"
                     width={100}
@@ -45,6 +47,8 @@ const SideBar = () => {
                     <li className="ml-2 mb-[10px] px-3 py-[5px]">
                         Online Music
                     </li>
+
+                    {/* Use map to iterate over arrays of objects to render links*/}
                     {linksOnlineMusic.map((link) => {
                         const LinkIcon = link.icon;
                         return (
@@ -55,7 +59,7 @@ const SideBar = () => {
                                     "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]",
                                     {
                                         "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] ":
-                                            pathname === link.href,
+                                            pathname === link.href, // If the current router link is equal to this router link, this css will be added                            
                                     }
                                 )}
                             >
@@ -70,7 +74,7 @@ const SideBar = () => {
                 <ul className="mt-8">
                     <li className="ml-2 mb-[10px] px-3 py-[5px]">My Music</li>
 
-                    {/* Like */}
+                    {/* Use map to iterate over arrays of objects to render links*/}
                     {linksMyMusic.map((link) => {
                         const LinkIcon = link.icon;
                         return (
@@ -81,7 +85,7 @@ const SideBar = () => {
                                     "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]",
                                     {
                                         "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] ":
-                                            pathname === link.href,
+                                            pathname === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
                             >
