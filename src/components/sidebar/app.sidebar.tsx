@@ -22,9 +22,9 @@ const linksOnlineMusic = [
 
 // initializes an array of objects (My music)
 const linksMyMusic = [
-    {name: "Like", href: "/like", icon: HeartIcon},
-    {name: "Playlist", href: "/playlist", icon: AdjustmentsHorizontalIcon},
-]
+    { name: "Like", href: "/like", icon: HeartIcon },
+    { name: "Playlist", href: "/playlist", icon: AdjustmentsHorizontalIcon },
+];
 const SideBar = () => {
     const pathname = usePathname(); // Get the current router link
     return (
@@ -44,7 +44,7 @@ const SideBar = () => {
             <nav className="mt-10">
                 {/* Online music */}
                 <ul>
-                    <li className="ml-2 mb-[10px] px-3 py-[5px]">
+                    <li className="ml-2 mb-[10px] px-3 py-[5px] text-[#787878]">
                         Online Music
                     </li>
 
@@ -56,10 +56,10 @@ const SideBar = () => {
                                 key={link.name}
                                 href={link.href}
                                 className={clsx(
-                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]",
+                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9] font-bold",
                                     {
-                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] ":
-                                            pathname === link.href, // If the current router link is equal to this router link, this css will be added                            
+                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] text-white":
+                                            pathname === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
                             >
@@ -72,7 +72,9 @@ const SideBar = () => {
 
                 {/* My music */}
                 <ul className="mt-8">
-                    <li className="ml-2 mb-[10px] px-3 py-[5px]">My Music</li>
+                    <li className="ml-2 mb-[10px] px-3 py-[5px] text-[#787878]">
+                        My Music
+                    </li>
 
                     {/* Use map to iterate over arrays of objects to render links*/}
                     {linksMyMusic.map((link) => {
@@ -82,9 +84,9 @@ const SideBar = () => {
                                 key={link.name}
                                 href={link.href}
                                 className={clsx(
-                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9]",
+                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9] font-bold",
                                     {
-                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] ":
+                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] text-white":
                                             pathname === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
