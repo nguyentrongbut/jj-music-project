@@ -1,12 +1,16 @@
+import SideBar from "@/components/sidebar/app.sidebar";
 import "./globals.css";
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+    return (
+        <html lang="en">
+            <body>
+                <SideBar />
+                {children}
+            </body>
+        </html>
+    );
 }
