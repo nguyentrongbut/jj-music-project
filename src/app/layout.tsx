@@ -14,7 +14,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={lato.className}>
                 <SideBar />
-                <main className="ml-[204px]">{children}</main>
+                <main className="sm:ml-[204px] bg-[#f0f0f0] sm:bg-white h-screen">{children}</main>
             </body>
         </html>
     );

@@ -17,7 +17,6 @@ const linksOnlineMusic = [
     { name: "Recommend", href: "/", icon: StarIcon },
     { name: "Music", href: "/music", icon: MusicalNoteIcon },
     { name: "Video", href: "/video", icon: VideoCameraIcon },
-    { name: "Radio", href: "/radio", icon: RadioIcon },
 ];
 
 // initializes an array of objects (My music)
@@ -28,9 +27,9 @@ const linksMyMusic = [
 const SideBar = () => {
     const pathname = usePathname(); // Get the current router link
     return (
-        <aside className="w-[204px] fixed top-0 bottom-0 left-0 bg-[#f0f0f0] pt-4 px-[19px]">
+        <aside className="sm:w-[204px] fixed sm:top-0 bottom-0 left-0 right-0 bg-white sm:bg-[#f0f0f0] sm:pt-4 px-[19px]">
             {/* Logo */}
-            <Link key="jj-music" href="/">
+            <Link key="jj-music" href="/" className="hidden sm:block">
                 <Image
                     className="ml-[14px]"
                     width={100}
@@ -41,10 +40,10 @@ const SideBar = () => {
             </Link>
 
             {/* nav */}
-            <nav className="mt-10">
+            <nav className="sm:mt-10 flex sm:block">
                 {/* Online music */}
-                <ul>
-                    <li className="ml-2 mb-[10px] px-3 py-[5px] text-[#787878]">
+                <ul className="flex sm:block justify-between w-full">
+                    <li className="ml-2 mb-[10px] px-3 py-[5px] text-[#787878] hidden sm:block">
                         Online Music
                     </li>
 
@@ -56,23 +55,21 @@ const SideBar = () => {
                                 key={link.name}
                                 href={link.href}
                                 className={clsx(
-                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9] font-bold",
+                                    "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
                                     {
-                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] text-white":
+                                        "sm:bg-gradient-to-l sm:from-[#0bce7f] sm:to-[#1dd3aa] text-[#0bce7f] sm:text-white":
                                             pathname === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
                             >
-                                <LinkIcon className="h-6 w-6 text-[2b2b2b]" />
-                                <p>{link.name}</p>
+                                <LinkIcon className="h-6 w-6 text-[2b2b2b] max-[600px]:w-8 max-[600px]:h-8" />
+                                <p className="max-[600px]:hidden">{link.name}</p>
                             </Link>
                         );
                     })}
-                </ul>
 
-                {/* My music */}
-                <ul className="mt-8">
-                    <li className="ml-2 mb-[10px] px-3 py-[5px] text-[#787878]">
+                    {/* My music */}
+                    <li className="sm:mt-8 ml-2 mb-[10px] px-3 py-[5px] text-[#787878] hidden sm:block">
                         My Music
                     </li>
 
@@ -84,15 +81,15 @@ const SideBar = () => {
                                 key={link.name}
                                 href={link.href}
                                 className={clsx(
-                                    "flex gap-2 px-3 py-[5px] items-center rounded-sm mb-[10px] hover:bg-[#d9d9d9] font-bold",
+                                    "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
                                     {
-                                        "bg-gradient-to-l from-[#0bce7f] to-[#1dd3aa] text-white":
+                                        "sm:bg-gradient-to-l sm:from-[#0bce7f] sm:to-[#1dd3aa] text-[#0bce7f] sm:text-white":
                                             pathname === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
                             >
-                                <LinkIcon className="h-6 w-6 text-[2b2b2b]" />
-                                <p>{link.name}</p>
+                                <LinkIcon className="h-6 w-6 text-[2b2b2b] max-[600px]:w-8 max-[600px]:h-8" />
+                                <p className="max-[600px]:hidden">{link.name}</p>
                             </Link>
                         );
                     })}
