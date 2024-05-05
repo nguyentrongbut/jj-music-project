@@ -3,7 +3,6 @@ import {
     AdjustmentsHorizontalIcon,
     HeartIcon,
     MusicalNoteIcon,
-    RadioIcon,
     StarIcon,
     VideoCameraIcon,
 } from "@heroicons/react/24/outline";
