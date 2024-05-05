@@ -11,14 +11,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// initializes an array of objects (Online music)
+// initializes an links objects (Online music)
 const linksOnlineMusic = [
     { name: "Recommend", href: "/", icon: StarIcon },
     { name: "Music", href: "/music", icon: MusicalNoteIcon },
     { name: "Video", href: "/video", icon: VideoCameraIcon },
 ];
 
-// initializes an array of objects (My music)
+// initializes an links object (My music)
 const linksMyMusic = [
     { name: "Like", href: "/like", icon: HeartIcon },
     { name: "Playlist", href: "/playlist", icon: AdjustmentsHorizontalIcon },
@@ -48,10 +48,10 @@ const SideBar = () => {
 
                     {/* Use map to iterate over arrays of objects to render links*/}
                     {linksOnlineMusic.map((link) => {
-                        const LinkIcon = link.icon;
+                        const LinkIcon = link.icon; // Extracting the icon component from the link object
                         return (
                             <Link
-                                key={link.name}
+                                key={link.name} // Use name as a unique key
                                 href={link.href}
                                 className={clsx(
                                     "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
@@ -74,10 +74,10 @@ const SideBar = () => {
 
                     {/* Use map to iterate over arrays of objects to render links*/}
                     {linksMyMusic.map((link) => {
-                        const LinkIcon = link.icon;
+                        const LinkIcon = link.icon; // Extracting the icon component from the link object
                         return (
                             <Link
-                                key={link.name}
+                                key={link.name} // Use name as a unique key
                                 href={link.href}
                                 className={clsx(
                                     "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
