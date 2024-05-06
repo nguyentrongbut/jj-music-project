@@ -14,7 +14,7 @@ const AvatarGroup = () => {
                         height={24}
                         className="rounded-full object-cover flex-shrink-0"
                     ></Image>
-                    <span className="text-sm cursor-pointer hidden md:block">
+                    <span className="cursor-pointer hidden md:block">
                         Sign in/ Sign up
                     </span>
                     <button className="md:p-2" title="VIP">

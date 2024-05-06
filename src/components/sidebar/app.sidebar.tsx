@@ -13,9 +13,9 @@ import { usePathname } from "next/navigation";
 
 // initializes an links objects (Online music)
 const linksOnlineMusic = [
-    { name: "Recommend", href: "/", icon: StarIcon },
-    { name: "Music", href: "/music", icon: MusicalNoteIcon },
+    { name: "Music", href: "/", icon: MusicalNoteIcon },
     { name: "Video", href: "/video", icon: VideoCameraIcon },
+    // { name: "Recommend", href: "/recommend", icon: StarIcon },
 ];
 
 // initializes an links object (My music)
