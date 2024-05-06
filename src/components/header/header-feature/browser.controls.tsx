@@ -46,7 +46,7 @@ const BrowserControls = () => {
                     <button
                         onClick={btn.function} // Call respective function on button click
                         key={btn.title} // Use title as a unique key
-                        className="p-[10px] group"
+                        className="p-[10px] group hidden lg:block"
                         title={btn.title}
                     >
                         <BtnIcon className="w-5 h-5 text-[#7a7a7a] group-hover:text-[#0bce7f]" />

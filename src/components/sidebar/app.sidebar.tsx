@@ -62,7 +62,9 @@ const SideBar = () => {
                                 )}
                             >
                                 <LinkIcon className="h-6 w-6 text-[2b2b2b] max-[600px]:w-8 max-[600px]:h-8" />
-                                <p className="max-[600px]:hidden">{link.name}</p>
+                                <p className="max-[600px]:hidden">
+                                    {link.name}
+                                </p>
                             </Link>
                         );
                     })}
@@ -88,7 +90,9 @@ const SideBar = () => {
                                 )}
                             >
                                 <LinkIcon className="h-6 w-6 text-[2b2b2b] max-[600px]:w-8 max-[600px]:h-8" />
-                                <p className="max-[600px]:hidden">{link.name}</p>
+                                <p className="max-[600px]:hidden">
+                                    {link.name}
+                                </p>
                             </Link>
                         );
                     })}

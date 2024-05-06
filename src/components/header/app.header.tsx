@@ -4,8 +4,8 @@ import Search from "@/components/header/header-feature/search";
 
 const AppHeader = () => {
     return (
-        <header className="flex justify-between sm:ml-10 sm:mb-8 sm:pt-3">
-            <div className="flex items-center">
+        <header className="flex justify-between sm:mb-8 sm:pt-3 items-center pt-4 px-4">
+            <div className="flex items-center w-full md:w-auto">
                 <BrowserControls />
                 <Search />
             </div>
