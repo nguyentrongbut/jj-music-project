@@ -15,10 +15,10 @@ export default function RootLayout({
         <html lang="en">
             <body className={lato.className}>
                 <SideBar />
-                <main className="sm:ml-[204px] bg-[#f5f5f5] sm:bg-[#f5f5f5] h-screen">
+                <section className="sm:ml-[204px] bg-[#f5f5f5] sm:bg-[#f5f5f5] h-screen px-4">
                     <AppHeader />
                     {children}
-                </main>
+                </section>
             </body>
         </html>
     );

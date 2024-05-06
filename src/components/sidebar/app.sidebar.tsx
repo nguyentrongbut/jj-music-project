@@ -21,7 +21,7 @@ const linksOnlineMusic = [
 // initializes an links object (My music)
 const linksMyMusic = [
     { name: "Like", href: "/like", icon: HeartIcon },
-    { name: "Playlist", href: "/playlist", icon: AdjustmentsHorizontalIcon },
+    { name: "Playlist", href: "/my-playlist", icon: AdjustmentsHorizontalIcon },
 ];
 const SideBar = () => {
     const pathname = usePathname(); // Get the current router link
