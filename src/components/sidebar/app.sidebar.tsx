@@ -3,7 +3,6 @@ import {
     AdjustmentsHorizontalIcon,
     HeartIcon,
     MusicalNoteIcon,
-    StarIcon,
     VideoCameraIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
