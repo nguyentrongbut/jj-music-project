@@ -1,5 +1,9 @@
 const VideoPage = () => {
-    return <div>Video Page</div>;
+    return (
+        <div>
+            video page
+        </div>
+    );
 };
 
 export default VideoPage;

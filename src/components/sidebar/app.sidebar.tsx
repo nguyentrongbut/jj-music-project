@@ -13,7 +13,6 @@ import { usePathname } from "next/navigation";
 
 // initializes an links objects (Online music)
 const linksOnlineMusic = [
-    { name: "Music", href: "/", icon: MusicalNoteIcon },
     { name: "Video", href: "/video", icon: VideoCameraIcon },
     // { name: "Recommend", href: "/recommend", icon: StarIcon },
 ];
@@ -25,6 +24,8 @@ const linksMyMusic = [
 ];
 const SideBar = () => {
     const pathname = usePathname(); // Get the current router link
+    const parts = pathname.split("/");
+    const firstPart = "/" + parts[1];
     return (
         <aside className="sm:w-[204px] fixed sm:top-0 bottom-0 left-0 right-0 bg-white sm:bg-[#f0f0f0] sm:pt-4 px-[19px]">
             {/* Logo */}
@@ -46,6 +47,29 @@ const SideBar = () => {
                         Online Music
                     </li>
 
+                    {/* Music router */}
+                    <Link
+                        key="music" // Use name as a unique key
+                        href="/"
+                        className={clsx(
+                            "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
+                            {
+                                "sm:bg-gradient-to-l sm:from-[#0bce7f] sm:to-[#1dd3aa] text-[#0bce7f] sm:text-white":
+                                    [
+                                        "/",
+                                        "/highlight",
+                                        "/playlist",
+                                        "/singer",
+                                        "/top-music",
+                                        "/album",
+                                    ].includes(firstPart), // If the current router link is equal to this router link, this css will be added
+                            }
+                        )}
+                    >
+                        <MusicalNoteIcon className="h-6 w-6 text-[2b2b2b] max-[600px]:w-8 max-[600px]:h-8" />
+                        <p className="max-[600px]:hidden">Music</p>
+                    </Link>
+
                     {/* Use map to iterate over arrays of objects to render links*/}
                     {linksOnlineMusic.map((link) => {
                         const LinkIcon = link.icon; // Extracting the icon component from the link object
@@ -57,7 +81,7 @@ const SideBar = () => {
                                     "flex flex-col sm:flex-row gap-2 px-3 py-[20px] sm:py-[5px] items-center rounded-sm sm:mb-[10px] sm:hover:bg-[#d9d9d9] sm:font-bold",
                                     {
                                         "sm:bg-gradient-to-l sm:from-[#0bce7f] sm:to-[#1dd3aa] text-[#0bce7f] sm:text-white":
-                                            pathname === link.href, // If the current router link is equal to this router link, this css will be added
+                                            firstPart === link.href, // If the current router link is equal to this router link, this css will be added
                                     }
                                 )}
                             >

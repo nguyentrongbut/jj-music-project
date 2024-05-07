@@ -1,13 +1,11 @@
 import MusicNestedRouter from "@/components/music-nested-router/music.nested.router";
 
-
-
-const MusicPage = () => {
+const HighlightPage = () => {
     return (
         <main>
-            <MusicNestedRouter></MusicNestedRouter>
+            <MusicNestedRouter/>
         </main>
     );
 };
 
-export default MusicPage;
+export default HighlightPage;
