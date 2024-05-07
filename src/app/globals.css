@@ -75,3 +75,14 @@
     }
 }
 
+@layer utilities {
+    @media (max-width: 640px) {
+        .overflow-style {
+            overflow: scroll hidden;
+            -ms-overflow-style: none;
+        }
+        .overflow-style::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}

@@ -23,7 +23,7 @@ const AvatarGroup = () => {
                     <button className="p-1 md:p-2">
                         <PowerIcon
                             className="w-5 h-5 cursor-pointer"
-                            title="change background"
+                            title="logout"
                         />
                     </button>
                 </div>

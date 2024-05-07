@@ -17,12 +17,14 @@ const MusicNestedRouter = () => {
     return (
         <>
             <div className="px-[10px]">
-                <h2 className="font-bold text-3xl pb-6">Music</h2>
-                <nav className="text-lg flex gap-14">
+                <h2 className="font-bold text-3xl pb-6 hidden lg:block">
+                    Music
+                </h2>
+                <nav className="text-lg flex xl:gap-14 lg:gap-10 md:gap-6 gap-5 mt-5 sm:mt-0 max-[426px]:justify-normal justify-center sm:justify-normal overflow-style overflow-style::-webkit-scrollbar">
                     <Link
                         href="/highlight"
-                        className={clsx("hover:text-[#0bce7f]", {
-                            "relative after:block after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-[#0bce7f] after:rounded-full":
+                        className={clsx("hover:text-[#0bce7f] pb-1 sm:pb-0", {
+                            "relative after:block after:absolute sm:after:bottom-[-5px] after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-[#0bce7f] after:rounded-full":
                                 ["/", "/highlight"].includes(firstPart),
                         })}
                     >
@@ -32,10 +34,13 @@ const MusicNestedRouter = () => {
                         return (
                             <Link
                                 href={link.href}
-                                className={clsx("hover:text-[#0bce7f]", {
-                                    "relative after:block after:absolute after:bottom-[-5px] after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-[#0bce7f] after:rounded-full":
-                                        firstPart === link.href,
-                                })}
+                                className={clsx(
+                                    "hover:text-[#0bce7f] flex-shrink-0 pb-1 sm:pb-0",
+                                    {
+                                        "relative after:block after:absolute sm:after:bottom-[-5px] after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-12 after:h-1 after:bg-[#0bce7f] after:rounded-full":
+                                            firstPart === link.href,
+                                    }
+                                )}
                             >
                                 {link.name}
                             </Link>
